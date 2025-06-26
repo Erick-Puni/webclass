@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat IA – Erick Dev</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="icon" href="img/punisoft-logo.png" type="image/x-icon" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar" role="navigation" aria-label="Menú principal">
+      <h1 class="logo">PuniSoft</h1>
+      <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="consulta.html">Consulta</a></li>
+        <li><a href="ia.html" class="active">IA</a></li>
+        <li><a href="sapitos.html">Flexbox</a></li>
+        <li><a href="https://punisoft.kesug.com/">CRUD</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <!-- CHAT UI -->
+      <main class="chat-container">
+
+        <h2>Orbit Asistente IA</h2>
+        <div class="sprite-background"></div>
+        <div id="messages" class="messages"></div>
+        <form id="chat-form" class="chat-form">
+          <textarea
+            id="prompt"
+            rows="2"
+            placeholder="Escribe tu mensaje..."
+            required
+          ></textarea>
+          <button type="submit" class="btn">Enviar</button>
+        </form>
+      </main>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>© 2025 Punisoft | By Erick Punina</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <script src="js/ia.js"></script>
+  </body>
+</html>

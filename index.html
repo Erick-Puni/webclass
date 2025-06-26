@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio - Erick Dev</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+
+  <link rel="icon" href="img/punisoft-logo.png" type="image/x-icon">
+</head>
+<body>
+  <!-- NAVBAR -->
+    <nav class="navbar" role="navigation" aria-label="Menú principal">
+      <h1 class="logo">Erick Dev</h1>
+      <!-- Botón hamburguesa para móvil -->
+      <button class="menu-toggle" aria-label="Abrir menú">
+        &#9776;
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="consulta.html">Consulta</a></li>
+        <li><a href="ia.html">IA</a></li>
+        <li><a href="sapitos.html">Flexbox</a></li>
+        <li><a href="https://punisoft.kesug.com/">CRUD</a></li>
+        
+      </ul>
+    </nav>
+
+  <div class="container">
+    
+
+    <!-- SLIDER / CARRUSEL -->
+    <section class="slider" aria-label="Carrusel de secciones">
+      <div class="slides">
+        <div class="slide" data-link="consulta.html" style="background-image: url('img/img1.jpg')">
+          <div class="slide-content">
+            <h2>Consulta Flexbox &amp; Grid</h2>
+            <p>Aprende a maquetar con Flexbox y CSS Grid de forma sencilla.</p>
+            <a href="consulta.html" class="btn">Ir a Consulta</a>
+          </div>
+        </div>
+        <div class="slide" data-link="ia.html" style="background-image: url('img/img2.jpg')">
+          <div class="slide-content">
+            <h2>Integración de IA</h2>
+            <p>Interactúa con un chatbot simulado en tu propia web.</p>
+            <a href="ia.html" class="btn">Ver IA</a>
+          </div>
+        </div>
+        <div class="slide" data-link="sapitos.html" style="background-image: url('img/img3.png')">
+          <div class="slide-content">
+            <h2>Sapitos con Flexbox</h2>
+            <p>Una divertida galería de sapitos diseñada con Flexbox.</p>
+            <a href="sapitos.html" class="btn">Explorar Sapitos</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flechas de navegación -->
+      <button class="slider-nav prev" aria-label="Anterior slide">&lsaquo;</button>
+      <button class="slider-nav next" aria-label="Siguiente slide">&rsaquo;</button>
+
+      <!-- Indicadores -->
+      <div class="indicators" role="tablist"></div>
+    </section>
+
+    <!-- SECCIÓN DE TARJETAS -->
+    <section class="tarjetas" aria-label="Sección de tarjetas">
+      <div class="tarjeta">
+        <h3>Explora</h3>
+        <p>Conoce cómo usamos Flexbox y CSS Grid.</p>
+      </div>
+      <div class="tarjeta">
+        <h3>Descubre</h3>
+        <p>Interactúa con IA integrada en la web.</p>
+      </div>
+      <div class="tarjeta">
+        <h3>Gestiona</h3>
+        <p>CRUD funcional para tus datos.</p>
+      </div>
+    </section>
+  </div> <!-- /.container -->
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Punisoft | By Erick Punina</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/carrusel.js"></script>
+  <script>
+    // Toggle menú hamburguesa en móvil
+    (() => {
+      const toggle = document.querySelector('.menu-toggle');
+      const navLinks = document.querySelector('.nav-links');
+      toggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', navLinks.classList.contains('open'));
+      });
+    })();
+  </script>
+</body>
+</html>

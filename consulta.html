@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consulta Flexbox &amp; CSS Grid – Erick Dev</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+  <link rel="icon" href="img/punisoft-logo.png" type="image/x-icon">
+</head>
+<body>
+  <!-- NAVBAR -->
+    <nav class="navbar" role="navigation" aria-label="Menú principal">
+      <h1 class="logo">Erick Dev</h1>
+      <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="consulta.html" class="active">Consulta</a></li>
+        <li><a href="ia.html">IA</a></li>
+        <li><a href="sapitos.html">Flexbox</a></li>
+        <li><a href="https://punisoft.kesug.com/">CRUD</a></li>
+    
+      </ul>
+    </nav>
+  <div class="container">
+    
+
+    <!-- INTRODUCCIÓN -->
+    <main class="consulta-content">
+      <section class="consulta-intro">
+        <h2>Introducción a Flexbox y CSS Grid</h2>
+        <p>Flexbox y CSS Grid son los motores modernos de maquetación en CSS. Flexbox resuelve alineaciones en una sola dimensión (fila o columna) y es ideal para componentes UI como menús y tarjetas, mientras que Grid organiza elementos en dos dimensiones (filas y columnas) para construir layouts completos y responsivos.</p>
+      </section>
+
+      <!-- CONCEPTOS CLAVE -->
+      <section class="consulta-conceptos">
+        <h2>Conceptos clave y diferencias</h2>
+        <table>
+          <thead>
+            <tr><th>Característica</th><th>Flexbox</th><th>CSS Grid</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Dimensión</td><td>Unidimensional</td><td>Bidimensional</td></tr>
+            <tr><td>Flujo</td><td>Orden natural de elementos</td><td>Estructura explícita con plantilla</td></tr>
+            <tr><td>Alineación cruzada</td><td>S&#xed; (ejes principal y cruzado)</td><td>S&#xed; (filas, columnas y áreas)</td></tr>
+            <tr><td>Casos de uso típicos</td><td>Barras de navegación, galerías</td><td>Layouts de páginas, dashboards</td></tr>
+            <tr><td>Soporte superposición</td><td>Limitado</td><td>Sofisticado (grid-area)</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- FLEXBOX A FONDO -->
+      <section class="consulta-flexbox">
+        <h2>Flexbox a fondo</h2>
+        <h3>1. Activar Flexbox</h3>
+        <pre><code>.flex-container { display: flex; }</code></pre>
+        <p>El contenedor padre se convierte en <code>flex-container</code> y los hijos en <code>flex-items</code>.</p>
+
+        <h3>2. Propiedades del contenedor</h3>
+        <table>
+          <thead><tr><th>Propiedad</th><th>Descripción</th><th>Valores comunes</th></tr></thead>
+          <tbody>
+            <tr><td>flex-direction</td><td>Define el eje principal</td><td>row, column, row-reverse, column-reverse</td></tr>
+            <tr><td>flex-wrap</td><td>Permite varias filas</td><td>nowrap, wrap, wrap-reverse</td></tr>
+            <tr><td>justify-content</td><td>Distribuye elementos</td><td>flex-start, center, space-between, space-around, space-evenly</td></tr>
+            <tr><td>align-items</td><td>Alinea en eje cruzado</td><td>stretch, center, flex-start, flex-end, baseline</td></tr>
+            <tr><td>gap</td><td>Espacio entre ítems</td><td>cualquier unidad (e.g. 1rem)</td></tr>
+          </tbody>
+        </table>
+
+        <h3>3. Propiedades de ítems</h3>
+        <ul>
+          <li><strong>order</strong>: cambia el orden visual sin alterar HTML.</li>
+          <li><strong>flex-grow</strong>: distribuye espacio sobrante.</li>
+          <li><strong>flex-shrink</strong>: controla contracción.</li>
+          <li><strong>flex-basis</strong>: tamaño inicial.</li>
+          <li><strong>align-self</strong>: alineación individual.</li>
+        </ul>
+
+        <h3>4. Ejercicio guiado: mini-navbar</h3>
+        <pre><code>.topbar { display: flex; justify-content: space-between; align-items: center; padding: 1rem; background: #0f2027; }</code></pre>
+        <p>@media (max-width: 600px) { <code>.topbar { flex-direction: column; }</code> }</p>
+      </section>
+
+      <!-- CSS GRID PASO A PASO -->
+      <section class="consulta-grid">
+        <h2>CSS Grid paso a paso</h2>
+        <h3>1. Activar Grid</h3>
+        <pre><code>.grid-demo { display: grid; }</code></pre>
+
+        <h3>2. Definir filas y columnas</h3>
+        <pre><code>.grid-demo { grid-template-columns: repeat(3, 1fr); grid-template-rows: auto 200px; gap: 1rem; }</code></pre>
+
+        <h3>3. Posicionar ítems</h3>
+        <pre><code>.item-a { grid-column: 2 / 4; grid-row: 1 / span 2; }</code></pre>
+        <p>Usa <code>grid-template-areas</code> para nombrar zonas y simplificar el layout.</p>
+      </section>
+
+      <!-- MEJORES PRÁCTICAS -->
+      <section class="consulta-practicas">
+        <h2>Buenas prácticas</h2>
+        <ul>
+          <li>Usa <code>gap</code> en lugar de <code>margin</code> para separar ítems.</li>
+          <li>Combina Flexbox con <code>min-height</code> y auto-margins para centrar verticalmente.</li>
+          <li>Empieza mobile-first: inicia con una columna y expande con media queries.</li>
+          <li>Degrada con <code>@supports not (display:grid)</code> para navegadores antiguos.</li>
+        </ul>
+      </section>
+
+      <!-- PATRONES Y RECURSOS -->
+      <section class="consulta-recursos">
+        <h2>Recursos recomendados</h2>
+        <ul>
+          <li><a href="https://developer.mozilla.org/es/docs/Web/CSS/CSS_flexible_box_layout" target="_blank">MDN Flexbox</a></li>
+          <li><a href="https://developer.mozilla.org/es/docs/Web/CSS/CSS_grid_layout" target="_blank">MDN CSS Grid</a></li>
+          <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">CSS-Tricks: Flexbox</a></li>
+          <li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">CSS-Tricks: CSS Grid</a></li>
+          <li><a href="https://flexboxfroggy.com/" target="_blank">Flexbox Froggy</a></li>
+          <li><a href="https://cssgridgarden.com/" target="_blank">Grid Garden</a></li>
+        </ul>
+      </section>
+
+      <!-- ROADMAP DE PRÁCTICA -->
+      <section class="consulta-roadmap">
+        <h2>Roadmap de práctica</h2>
+        <ol>
+          <li><strong>Semana 1 – Flexbox:</strong> teoría y Flexbox Froggy; navbar y cards responsivas.</li>
+          <li><strong>Semana 2 – Grid:</strong> tutoriales de Grid; replica un layout de periódico.</li>
+          <li><strong>Semana 3 – Combinación:</strong> refactoriza tu portfolio con Grid y Flexbox.</li>
+          <li><strong>Semana 4 – Proyecto final:</strong> crea un dashboard y publícalo en GitHub Pages.</li>
+        </ol>
+      </section>
+    </main>
+  </div> <!-- /.container -->
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Punisoft | By Erick Punina</p>
+  </footer>
+  <script src="js/consulta.js"></script>
+</body>
+</html>

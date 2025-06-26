@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sapitos – Erick Dev</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+  <link rel="icon" href="img/punisoft-logo.png" type="image/x-icon">
+</head>
+<body>
+  <!-- NAVBAR -->
+    <nav class="navbar" role="navigation" aria-label="Menú principal">
+      <h1 class="logo">Erick Dev</h1>
+      <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="consulta.html">Consulta</a></li>
+        <li><a href="ia.html">IA</a></li>
+        <li><a href="sapitos.html" class="active">Flexbox</a></li>
+        <li><a href="https://punisoft.kesug.com/">CRUD</a></li>
+      </ul>
+    </nav>
+
+  <div class="container">
+    
+
+    <!-- GALERÍA DE SAPITOS -->
+    <section class="sapitos-gallery" style="margin: 40px 0;">
+      <h2>Galería de Sapitos (<em>Flexbox Froggy</em>)</h2>
+      <div class="flex-grid" style="flex-wrap: wrap; gap: 20px;">
+        <img src="img/image1.png"  alt="Nivel 1"  width="1100" />
+        <img src="img/image2.png"  alt="Nivel 2"  width="1100" />
+        <img src="img/image3.png"  alt="Nivel 3"  width="1100" />
+        <img src="img/image4.png"  alt="Nivel 4"  width="1100" />
+        <img src="img/image5.png"  alt="Nivel 5"  width="1100" />
+        <img src="img/image6.png"  alt="Nivel 6"  width="1100" />
+        <img src="img/image7.png"  alt="Nivel 7"  width="1100" />
+        <img src="img/image8.png"  alt="Nivel 8"  width="1100" />
+        <img src="img/image9.png"  alt="Nivel 9"  width="1100" />
+        <img src="img/image10.png" alt="Nivel 10" width="1100" />
+        <img src="img/image11.png" alt="Nivel 11" width="1100" />
+        <img src="img/image12.png" alt="Nivel 12" width="1100" />
+        <img src="img/image13.png" alt="Nivel 13" width="1100" />
+        <img src="img/image14.png" alt="Nivel 14" width="1100" />
+        <img src="img/image15.png" alt="Nivel 15" width="1100" />
+        <img src="img/image16.png" alt="Nivel 16" width="1100" />
+        <img src="img/image17.png" alt="Nivel 17" width="1100" />
+        <img src="img/image18.png" alt="Nivel 18" width="1100" />
+        <img src="img/image19.png" alt="Nivel 19" width="1100" />
+        <img src="img/image20.png" alt="Nivel 20" width="1100" />
+        <img src="img/image21.png" alt="Nivel 21" width="1100" />
+        <img src="img/image22.png" alt="Nivel 22" width="1100" />
+        <img src="img/image23.png" alt="Nivel 23" width="1100" />
+        <img src="img/image24.png" alt="Nivel 24" width="1100" />
+        <img src="img/image25.png" alt="Fin de ejercicios" width="1100" />
+      </div>
+    </section>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Punisoft | By Erick Punina</p>
+  </footer>
+
+  <!-- script para menú hamburguesa -->
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const navs   = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      navs.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', navs.classList.contains('open'));
+    });
+  </script>
+</body>
+</html>
